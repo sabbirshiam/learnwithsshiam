@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	before_action :require_user, only: [:new, :edit]
 	before_action :set_user, only: [:edit, :update, :show, :destroy]
 
 	def index

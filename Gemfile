@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 #gem bootstrap
-gem 'bootstrap', '~>4.0.0'
+gem 'bootstrap-sass', '~> 3.4.1'
 #Jquery for rails 5.1+
 gem 'jquery-rails'
 

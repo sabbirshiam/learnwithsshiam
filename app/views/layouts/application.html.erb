@@ -9,11 +9,7 @@
     <meta name="description" content="my very own first rails site">
     <meta name="author" content="ShabbirShiam">
 
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-    <!-- <link href="assets/stylesheets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"> -->
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -23,8 +19,11 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    
+    <!-- Custom fonts for this template -->
+    <!-- <link href="assets/stylesheets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet"> -->
     <!-- Custom styles for this template -->
-    <link href="assets/resume.min.css" rel="stylesheet">
+    <!-- <link href="assets/resume.min.css" rel="stylesheet"> -->
     <!-- Bootstrap core JavaScript -->
     <!-- <script src="assets/stylesheets/vendor/jquery/jquery.min.js"></script>-->
     <!-- <script src="assets/stylesheets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
@@ -32,8 +31,10 @@
     <!-- Plugin JavaScript -->
     <!-- <script src="assets/stylesheets/vendor/jquery-easing/jquery.easing.min.js"></script> -->
 
+    <% self_css_path =  "/assets/" + controller.controller_name %>
+    <%= stylesheet_link_tag self_css_path,:media =>  "all"  %>
     <!-- Custom scripts for this template -->
-    <script src="assets/javascripts/resume.min.js"></script>
+    <!-- <script src="assets/javascripts/resume.min.js"></script> -->
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>

@@ -21,12 +21,8 @@
   </head>
 
   <body>
-   <%= render 'layouts/navigation' %>
-    <% flash.each do |name, msg| %>
-        <ul class="alert">
-            <li><%= msg %></li>
-        </ul>
-    <% end %>
+    <%= render 'layouts/navigation' %>
+    <%= render 'layouts/message' %>
     <%= yield %>
   </body>
 </html>

@@ -15,11 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="active"><li><%= link_to "Articles", articles_path %></li>
-          <% if logged_in? %>
-            <li><%= link_to "Create Article", new_article_path %></li>
-            <% else %>
-            <li><%= link_to "Login to create Blog", login_path %></li>
-          <% end %>
+          <li><%= link_to "Create Article", logged_in? ? new_article_path : login_path %></li>
       </ul>
       
       

@@ -1,0 +1,41 @@
+<%= render 'error', obj: @user %>
+<div class="row">
+    <div class="col-xs-12">
+      <%= form_with(scope: :user, model: @user, url: url, local: true,:html => {class: "form-horizontal", role: "form"}) do |form| %>
+          <div class="form-group">
+            <div class="control-label col-sm-2">
+              <%= form.label :username %>
+            </div>
+            <div class="col-sm-6">
+              <%= form.text_field :username , class: "form-control", placeholder: "Title of the user", autofocus: true, required: true%>
+            </div>
+          </div>
+            <div class="form-group">
+              <div class="control-label col-sm-2">
+                <%= form.label :email %>
+              </div>
+              <div class="col-sm-6">
+                <%= form.email_field :email , class: "form-control", placeholder: "user valid email", required: true%>
+              </div>
+          </div>
+
+          <div class="form-group">
+            <div class="control-label col-sm-2">
+              <%= form.label :password %>
+            </div>
+            <div class="col-sm-8">
+              <%= form.password_field :password, class: "form-control", placeholder: "Enter password" %>
+            </div>
+          </div>  
+         
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <%= form.submit(@user.new_record?  ? "Sign up" : "Update account", class: 'btn btn-primary btn-large')  %>
+            </div>
+          </div>
+      <% end %>
+        <div class="col-xs-4 col-xs-offset-2">
+          [ <%= link_to 'Cancel request and Return to Articles Listing', articles_path %> ]
+        </div> 
+    </div>
+</div>

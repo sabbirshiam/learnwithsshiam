@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-	get "/", to: "pages#index", as: "root"
+	get "/", to: "articles#index", as: "root"
   	get 'homepage/home'
 
   	resources 'pages'

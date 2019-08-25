@@ -6,6 +6,8 @@
 </div>
 <h4 align="center"><%= @user.username %>'s articles</h4>
 <%= render 'shared/article', obj: @user.articles %>
+<% if @user_articles %>
 <div align="center">
   <%= will_paginate @user_articles %>
 </div>
+<% end %>

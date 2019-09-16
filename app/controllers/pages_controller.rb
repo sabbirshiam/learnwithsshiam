@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
 	def index
+		@user_article_summary = UserArticleSummary.all.where(user_id: 1).where('created_at< ?', DateTime.current)
 	end
 	def new
 	end
